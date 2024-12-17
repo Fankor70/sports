@@ -481,7 +481,7 @@ p:not([class]):not(:last-child) {
 }
 
 .training-types {
-    min-width: 500px;
+    min-width: 280px;
     margin-inline: auto;
     padding: 70px 80px;
     position: relative;
@@ -519,6 +519,7 @@ p:not([class]):not(:last-child) {
 }
 
 @media (max-width: 1280px){
+
     .training-types-list {
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
@@ -531,6 +532,10 @@ p:not([class]):not(:last-child) {
         row-gap: 10px;
         padding-top: 20px;
     }
+
+        .banner {
+            min-height: calc(20vh - var(--header-height));
+        }
 
     .header,
     .banner {
