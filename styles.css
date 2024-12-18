@@ -324,7 +324,7 @@ p:not([class]):not(:last-child) {
 
 .input {
     height: var(--input-height);
-    padding-inline: 25px;
+    padding-inline: 10px;
     width: 100%;
     background-color: transparent;
     color: var(--color-light);
@@ -733,6 +733,12 @@ p:not([class]):not(:last-child) {
 
     .join-us-body {
         padding-bottom: 80px;
+        text-align: center;
+    }
+
+    .backdrop-title::before {   
+        right: calc(75% + 8px);
+        bottom: 190px;
     }
 
     .join-us-title:not(:last-child) {
@@ -742,7 +748,7 @@ p:not([class]):not(:last-child) {
 
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px, min-width: 430px) {
     .header {
         padding-top: 10px;
     }
@@ -807,7 +813,9 @@ p:not([class]):not(:last-child) {
 
     .join-us-title:not(:last-child) {
         margin-bottom: 40px;
+        text-align: center;
     }
+
 
     .join-us-from-subtitle {
         font-size: 16px;
