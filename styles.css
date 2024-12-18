@@ -520,7 +520,7 @@ p:not([class]):not(:last-child) {
 .training-types {
     min-width: 280px;
     margin-inline: auto;
-    padding: 70px 80px;
+    padding: 70px 60px;
     position: relative;
     background-color: var(--color-dark);
 }
