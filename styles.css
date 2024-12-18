@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "Jost";
+    font-family: 'Heebo';
     src: url("./fonts/Jost-Regular.woff2");
     font-weight: 400;
 }
@@ -48,6 +48,16 @@ html {
     font-size: 40px;
 }
 
+.titl-big {
+    font-size: clamp(24px, 3.12vw, 60px);
+}
+
+.backdrop-title.centered::after {
+    left: 50%;
+    top: -0.65em;
+    translate: -50% 0;
+}
+
 .backdrop-title {
     position: relative;
     z-index: 2;
@@ -58,6 +68,7 @@ html {
     display: block;
     position: absolute;
     right: calc(100% + 8px);
+    bottom: 64px;
     width: 26px;
     height: 40px;
     aspect-ratio: 1;
@@ -65,6 +76,7 @@ html {
 }
 
 .backdrop-title::after {
+    font-family: "Jost", sans-serif;
     content: attr(data-title);
     position: absolute;
     z-index: -1;
@@ -145,7 +157,7 @@ body,
 }
 
 body {
-    font-family: "Jost", sans-serif;
+    font-family: "Heebo", sans-serif;
     font-weight: 300;
     font-size: 16px;
     line-height: 1.75;
@@ -310,6 +322,30 @@ p:not([class]):not(:last-child) {
     background-color: var(--color-light-gray);
 }
 
+.input {
+    height: var(--input-height);
+    padding-inline: 25px;
+    width: 100%;
+    background-color: transparent;
+    color: var(--color-light);
+    border: 1px solid var(--color-light-gray);
+    border-radius: var(--border-radius);
+}
+
+.input::placeholder {
+    color: var(--color-light-gray);
+}
+
+.input:hover {
+    border-color:var(--color-light) ;
+}
+
+.input:focus {
+    color: var(--color-dark);
+    background-color: var(--color-light-gray);
+    outline: none;
+}
+
 .header-actions {
     display: flex;
     column-gap: 40px;
@@ -374,12 +410,14 @@ p:not([class]):not(:last-child) {
     width: min(10.1vw, 194px);
     aspect-ratio: 1;
     margin-right: 30px;
+    margin-left: 25px;
     background: url("./icon/vector.svg") center/contain no-repeat;
 }
 
 .banner-title {
     font-size:min(18.75vw, 360px);
     line-height: 1;
+    
 }
 
 .banner-pagination-list {
@@ -522,6 +560,12 @@ p:not([class]):not(:last-child) {
     position: relative;
 }
 
+.join-us-video {
+    width: 100%;
+    max-width: 960px;
+    height: auto;
+}
+
 .join-us-video-play-button {
     position: absolute;
     top: 50%;
@@ -561,14 +605,67 @@ p:not([class]):not(:last-child) {
 }
 
 
+
 .join-us-body {
-    padding: 150px;
+    padding-bottom: 150px;
 }
 
 .join-us-title {
+    text-transform: uppercase;
+    position: relative;
+    margin-top: -0.4em;
     font-size: clamp(64px, 9.40vw, 180px);
+    line-height: 1;
+    text-align: center;
 }
 
+.join-us-title::after {
+    content: "";
+    display: inline-block;
+    width: 0.7em;
+    aspect-ratio: 1;
+    background: url(./icon/vector.svg) center/contain no-repeat;
+    scale: 1 -1;
+    margin-left: 0.14em;
+}
+
+.join-us-title:not(:last-child) {
+    margin-bottom: 130px;
+}
+
+.join-is-form-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 7px;
+}
+
+.join-is-form-header {
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+.join-is-form-header:not(:last-child) {
+    margin-bottom: 52px;
+}
+
+.join-us-from-subtitle {
+    font-size: 20px;
+    line-height: 1.65;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-light);
+}
+
+.join-is-form-body {
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.jois-us-fron-input {
+    max-width: 400px;
+}
 
 
 
@@ -583,6 +680,9 @@ p:not([class]):not(:last-child) {
 }
 
 @media (max-width: 1280px) {
+    .backdrop-title::after {
+            font-size: 1.8em;
+        }
 
     .training-types-list {
         grid-template-columns: repeat(3, 1fr);
@@ -620,12 +720,26 @@ p:not([class]):not(:last-child) {
     }
 
     .motivation-card-image {
-        min-width: 60%;
+        min-width: 55%;
         height: auto;
         margin-block: 0;
         width: 0;
         margin-bottom: 30px;
     }
+
+    .backdrop-title::after {
+        font-size: 1.8em;
+    }
+
+    .join-us-body {
+        padding-bottom: 80px;
+    }
+
+    .join-us-title:not(:last-child) {
+        margin-bottom: 80px;
+    }
+
+
 }
 
 @media (max-width: 767px) {
@@ -685,5 +799,23 @@ p:not([class]):not(:last-child) {
 
     .training-card-image {
         min-width: 120px;
+    }
+
+    .join-us-video-play-button {
+        width: 140px;
+    }
+
+    .join-us-title:not(:last-child) {
+        margin-bottom: 40px;
+    }
+
+    .join-us-from-subtitle {
+        font-size: 16px;
+    }
+
+    .join-is-form-body {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
     }
 }
