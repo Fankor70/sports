@@ -670,6 +670,10 @@ p:not([class]):not(:last-child) {
     max-width: 400px;
 }
 
+.join-us {
+    background-color: var(--color-dark-alternate);
+}
+
 
 
 
