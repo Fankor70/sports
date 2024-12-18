@@ -520,7 +520,7 @@ p:not([class]):not(:last-child) {
 .training-types {
     min-width: 280px;
     margin-inline: auto;
-    padding: 70px 60px;
+    padding: 50px 40px;
     position: relative;
     background-color: var(--color-dark);
 }
@@ -729,7 +729,7 @@ p:not([class]):not(:last-child) {
 
     .backdrop-title::after {
         font-size: 1.8em;
-        top: -0.55em;
+        top: -0.5em;
     }
 
     .join-us-body {
@@ -737,10 +737,7 @@ p:not([class]):not(:last-child) {
         text-align: center;
     }
 
-    .backdrop-title::before {   
-        right: calc(75% + 8px);
-        bottom: 190px;
-    }
+
 
     .join-us-title:not(:last-child) {
         margin-bottom: 80px;
@@ -827,4 +824,16 @@ p:not([class]):not(:last-child) {
         align-items: center;
         row-gap: 20px;
     }
+
+    .backdrop-title::before {
+        right: calc(75% + 8px);
+        bottom: 190px;
+    }
+
+    .backdrop-title::after {
+        font-size: 1.2em;
+        top: -0.4em;
+    }
+
+    
 }
