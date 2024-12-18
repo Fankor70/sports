@@ -831,10 +831,13 @@ p:not([class]):not(:last-child) {
         bottom: 190px;
     }
 
-    .backdrop-title::after {
-        font-size: 1.2em;
-        margin-top: 18px;
-    }
+
+
+
+        .backdrop-title::after {
+            font-size: 1.2em;
+            margin-top: 18px;
+        }
 
     
 }
