@@ -748,7 +748,7 @@ p:not([class]):not(:last-child) {
 
 }
 
-@media (max-width: 767px, min-width: 430px) {
+@media (max-width: 740px) {
     .header {
         padding-top: 10px;
     }
