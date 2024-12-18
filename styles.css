@@ -477,12 +477,14 @@ p:not([class]):not(:last-child) {
     display: flex;
     justify-content: start;
     align-items: center;
+    background-color: var(--color-dark);
 
     column-gap: clamp(30px, 10.42vw, 200px)
 }
 
 .motivation-item:nth-child(even) .motivation-card{
     flex-direction: row-reverse;
+    background-color: var(--color-dark-alternate);
 }
 
 .motivation-card-image{
@@ -830,14 +832,6 @@ p:not([class]):not(:last-child) {
         right: calc(75% + 8px);
         bottom: 190px;
     }
-
-
-
-
-        .backdrop-title::after {
-            font-size: 1.2em;
-            margin-top: 18px;
-        }
 
     
 }
