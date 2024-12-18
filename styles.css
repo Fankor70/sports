@@ -276,6 +276,8 @@ p:not([class]):not(:last-child) {
     background-color: var(--color-light);
     border: none;
     border-radius: var(--border-radius);
+
+    font-family: "Jost", sans-serif;
 }
 
 .button:hover {
