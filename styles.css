@@ -729,6 +729,7 @@ p:not([class]):not(:last-child) {
 
     .backdrop-title::after {
         font-size: 1.8em;
+        top: -0.55em;
     }
 
     .join-us-body {
