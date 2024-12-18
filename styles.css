@@ -512,13 +512,78 @@ p:not([class]):not(:last-child) {
 
 
 
+/* join-us */
+
+.join-us-video-wrapper {
+    background: url("./img/join-us-pg.jpg") center/cover no-repeat var(--color-dark-alternate);
+    padding: 150px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.join-us-video-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 4px;
+    width: 200px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-light);
+    aspect-ratio: 1;
+    background-color: transparent;
+    border: var(--border);
+    border-radius: 50%;
+}
+
+.join-us-video-play-button::after {
+    content: "";
+    width: 25px;
+    aspect-ratio: 1;
+    background: url("./icon/svg--button-arrow.svg") center/contain no-repeat;
+    transition-duration: var(--transition-duration);
+
+}
+
+.join-us-video-play-button:hover {
+    color: #000000;
+    background-color: var(--color-light-gray);
+}
+
+.join-us-video-play-button:hover::after {
+    filter: invert(1);
+}
+
+
+.join-us-body {
+    padding: 150px;
+}
+
+.join-us-title {
+    font-size: clamp(64px, 9.40vw, 180px);
+}
+
+
+
+
+
+
+
+
 @media (max-width: 1919px) {
     .motivation-card-image {
         margin-block: -20px;
     }
 }
 
-@media (max-width: 1280px){
+@media (max-width: 1280px) {
 
     .training-types-list {
         grid-template-columns: repeat(3, 1fr);
@@ -533,9 +598,9 @@ p:not([class]):not(:last-child) {
         padding-top: 20px;
     }
 
-        .banner {
-            min-height: calc(20vh - var(--header-height));
-        }
+    .banner {
+        min-height: calc(20vh - var(--header-height));
+    }
 
     .header,
     .banner {
@@ -586,7 +651,7 @@ p:not([class]):not(:last-child) {
         margin-bottom: 5px;
     }
 
-    .banner-info::before{
+    .banner-info::before {
         margin-right: 18px;
     }
 
@@ -603,24 +668,23 @@ p:not([class]):not(:last-child) {
         padding-block: 30px;
     }
 
-    .motivation-card-image{
+    .motivation-card-image {
         min-width: 60%;
 
     }
 
-        .training-types-list {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-
-    .training-types-item{
-        --trainingTypesItemBgIconSize: 50px;
-
-        row-gap:10px ;
+    .training-types-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
     }
 
-        .training-card-image {
-            min-width: 120px;
-        }
-}
+    .training-types-item {
+        --trainingTypesItemBgIconSize: 50px;
 
+        row-gap: 10px;
+    }
+
+    .training-card-image {
+        min-width: 120px;
+    }
+}
