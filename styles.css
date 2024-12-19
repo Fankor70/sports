@@ -713,7 +713,7 @@ p:not([class]):not(:last-child) {
 }
 
 .location-description{
-    min-width: 490px;
+    min-width: 400px;
 }
 
 .location-description:not(:last-child) {
@@ -802,7 +802,7 @@ p:not([class]):not(:last-child) {
     }
 }
 
-@media (max-width: 740px) {
+@media (max-width: 700px) {
     .header {
         padding-top: 10px;
     }
@@ -883,6 +883,8 @@ p:not([class]):not(:last-child) {
 
     .location-body {
         padding-block: 40px;
+        min-width: 420px;
+        padding: 80px 0px;
     }
 
     .location-description:not(:last-child) {
@@ -890,8 +892,15 @@ p:not([class]):not(:last-child) {
     }
 
     .location-title.centered::after {
-        margin-top: 20px;
+        margin-top: 10px;
+        font-size: 50px;
     }
+
+    .location-body {
+        min-width: 415px;
+    }
+
+
     /* .backdrop-title::before {
         right: calc(75% + 8px);
         bottom: 190px;
