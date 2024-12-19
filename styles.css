@@ -63,17 +63,16 @@ html {
     z-index: 2;
 }
 
-/* .backdrop-title::before {
+.backdrop-title::before {
     content: "";
     display: block;
     position: absolute;
     right: calc(100% + 8px);
-    bottom: 64px;
     width: 26px;
     height: 40px;
     aspect-ratio: 1;
     background: url(./icon/plus.svg);
-} */
+}
 
 .backdrop-title::after {
     font-family: "Jost", sans-serif;
@@ -697,6 +696,7 @@ p:not([class]):not(:last-child) {
 
 .location-title {
     text-transform: uppercase;
+    font-size: 40px;
 }
 
 .location-body {
@@ -710,10 +710,6 @@ p:not([class]):not(:last-child) {
 
 .location-title:not(:last-child) {
     margin-bottom: 14px;
-}
-
-.location-description{
-    min-width: 400px;
 }
 
 .location-description:not(:last-child) {
@@ -734,7 +730,7 @@ p:not([class]):not(:last-child) {
 
 @media (max-width: 1280px) {
     .backdrop-title::after {
-            font-size: 1.8em;
+            margin-bottom: 50px;
         }
 
     .training-types-list {
@@ -900,11 +896,14 @@ p:not([class]):not(:last-child) {
         min-width: 370px;
     }
 
+    .title-medium.centered{
+        
+    }
 
-    /* .backdrop-title::before {
-        right: calc(75% + 8px);
-        bottom: 190px;
-    } */
+    .backdrop-title.centered::before {
+        right: calc(98% + 9px);
+        bottom: 65px;
+    } 
 
     
 }
