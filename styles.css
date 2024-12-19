@@ -63,7 +63,7 @@ html {
     z-index: 2;
 }
 
-.backdrop-title::before {
+/* .backdrop-title::before {
     content: "";
     display: block;
     position: absolute;
@@ -73,7 +73,7 @@ html {
     height: 40px;
     aspect-ratio: 1;
     background: url(./icon/plus.svg);
-}
+} */
 
 .backdrop-title::after {
     font-family: "Jost", sans-serif;
@@ -129,6 +129,11 @@ a:hover {
     padding-inline: var(--container-padding-x);
 }
 
+.container-wide {
+    max-width: 1920px;
+    margin-inline: auto;
+}
+
 body,
 :where(blockquote, figure):where([class]) {
     margin: 0;
@@ -161,6 +166,7 @@ body {
     font-weight: 300;
     font-size: 16px;
     line-height: 1.75;
+    color: var(--color-light);
     margin: 0;
     color: var(--light-grey);
     background-color: var(--color-dark);
@@ -675,6 +681,46 @@ p:not([class]):not(:last-child) {
 }
 
 
+/* location */
+
+
+.location {
+    
+    color: #FFFFFF;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.location-map-image {
+    height: auto;
+}
+
+.location-title {
+    text-transform: uppercase;
+}
+
+.location-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 15px;
+}
+
+.location-title:not(:last-child) {
+    margin-bottom: 14px;
+}
+
+.location-description{
+    min-width: 490px;
+}
+
+.location-description:not(:last-child) {
+    margin-bottom: 34px;
+}
+
+
 
 
 
@@ -750,7 +796,10 @@ p:not([class]):not(:last-child) {
         margin-bottom: 80px;
     }
 
-
+    .location {
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }
 
 @media (max-width: 740px) {
@@ -832,10 +881,21 @@ p:not([class]):not(:last-child) {
         row-gap: 20px;
     }
 
-    .backdrop-title::before {
+    .location-body {
+        padding-block: 40px;
+    }
+
+    .location-description:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .location-title.centered::after {
+        margin-top: 20px;
+    }
+    /* .backdrop-title::before {
         right: calc(75% + 8px);
         bottom: 190px;
-    }
+    } */
 
     
 }
