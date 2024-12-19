@@ -897,7 +897,7 @@ p:not([class]):not(:last-child) {
     }
 
     .location-body {
-        min-width: 415px;
+        min-width: 370px;
     }
 
 
